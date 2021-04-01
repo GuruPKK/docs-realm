@@ -104,6 +104,6 @@ http://stitch-docs-old.s3-website-us-east-1.amazonaws.com/.
 Realm Database Version 6 Documentation 
 --------------------------------------
 
-{+service+} uses {+client-database+} version 9 and above. The
+{+service+} uses {+client-database+} version 99 and above. The
 documentation for earlier versions of {+client-database+} can be found
 on the `Realm.io documentation site <https://realm.io/docs>`_.
