@@ -1,5 +1,5 @@
 =============
-MongoDB Realm
+MongoDB Realm GURU
 =============
 
 .. toctree::

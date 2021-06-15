@@ -42,3 +42,14 @@ deploy: build/public ## Deploy to the production bucket
 deploy-search-index: ## Update the search index for this branch
 	@echo "Building search index"
 	mut-index upload build/public -o ${PROJECT}-${GIT_BRANCH}.json -u ${PRODUCTION_URL} -s
+stagel: 
+	git clone --quiet https://github.com/mongodb/snooty-scripts.git build_scripts
+	@ cd build_scripts && npm list mongodb || npm install mongodb
+	@ source ~/.config/.snootyenv && node build_scripts/app.js $(filter-out $@,$(MAKECMDGOALS))
+	@ rm -rf build_scripts
+commit:
+        @:
+local:
+        @:
+clean: 
+	rm -rf build
